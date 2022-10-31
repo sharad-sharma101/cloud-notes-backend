@@ -10,7 +10,9 @@ const app = express()
 const port = process.env.PORT || 5000;
 
 connectToMongo();
-
+app.get('/', (req, res) => {
+  res.sendStatus(200)
+})
 app.use(cors())
 app.use(express.json());
 
